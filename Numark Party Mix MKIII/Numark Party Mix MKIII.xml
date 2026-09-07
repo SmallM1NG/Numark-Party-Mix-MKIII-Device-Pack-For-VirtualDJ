@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<device name="Numark Party Mix MKIII"
+        author="DJM1NG"
+        description="Numark Party Mix MKIII"
+        version="850"
+        type="MIDI"
+        vid="0x15E4"
+        pid="0x005C"
+        decks="2"
+        padColumns="4"
+        padRows="2"
+        padSides="2">
+
+  <audio description="Numark Party Mix MKIII"
+         input="0"
+         output="2"
+         mixer="yes"
+         mic="no"
+         vid="0x15E4"
+         pid="0x005C" />
+
+  <!-- Handshake / claim LED control (from Numark Party Mix family mappings).
+       Without this, firmware overwrites button LEDs with its own light show. -->
+  <init sendsysex="F000013F3848F7" />
+  <init sendsysex="F07E7F0601F7" />
+
+  <!-- ========== DECK 1 (CH 0) ========== -->
+  <button note="0x00" name="PLAY" deck="1" channel="0" />
+  <button note="0x01" name="CUE" deck="1" channel="0" />
+  <button note="0x02" name="SYNC" deck="1" channel="0" />
+  <button note="0x04" name="BTN_NOTE4" deck="1" channel="0" />
+  <button note="0x05" name="LOAD_PREV" deck="1" channel="0" />
+  <button note="0x1B" name="PFL" deck="1" channel="0" />
+  <button note="0x46" name="STEM_ACAPELLA" deck="1" channel="0" />
+  <button note="0x48" name="STEM_INSTRUMENTAL" deck="1" channel="0" />
+  <button note="0x50" name="JOG_TOUCH" deck="1" channel="0" />
+  <button note="0x54" name="STEMS_EQ" deck="1" channel="0" />
+
+  <led note="0x00" name="LED_PLAY" deck="1" channel="0" />
+  <led note="0x01" name="LED_CUE" deck="1" channel="0" />
+  <led note="0x02" name="LED_SYNC" deck="1" channel="0" />
+  <led note="0x04" name="LED_NOTE4" deck="1" channel="0" />
+  <led note="0x05" name="LED_LOAD_PREV" deck="1" channel="0" />
+  <led note="0x1B" name="LED_PFL" deck="1" channel="0" />
+  <led note="0x46" name="LED_STEM_ACAPELLA" deck="1" channel="0" />
+  <led note="0x48" name="LED_STEM_INSTRUMENTAL" deck="1" channel="0" />
+  <led note="0x54" name="LED_STEMS_EQ" deck="1" channel="0" />
+
+  <led note="0x2E" name="DECK_1_LED_BEAT_FWD" deck="1" channel="0" />
+  <led note="0x2F" name="DECK_1_LED_BEAT_MATCH" deck="1" channel="0" />
+  <led note="0x30" name="DECK_1_LED_BEAT_REV" deck="1" channel="0" />
+
+  <slider cc="0x09" name="PITCH" deck="1" channel="0" />
+  <slider cc="0x17" name="EQ_HIGH" deck="1" channel="0" zero="0x40" />
+  <slider cc="0x18" name="EQ_MID" deck="1" channel="0" zero="0x40" />
+  <slider cc="0x19" name="EQ_LOW" deck="1" channel="0" zero="0x40" />
+  <slider cc="0x1A" name="FILTER" deck="1" channel="0" zero="0x40" />
+  <slider cc="0x1C" name="VOLUME" deck="1" channel="0" />
+
+  <jog cc="0x06" name="JOG" deck="1" channel="0" zero="0x00" full="128" />
+  <jog cc="0x2B" name="JOG_SEARCH" deck="1" channel="0" zero="0x00" full="128" />
+
+  <!-- ========== DECK 2 (CH 1) ========== -->
+  <button note="0x00" name="PLAY" deck="2" channel="1" />
+  <button note="0x01" name="CUE" deck="2" channel="1" />
+  <button note="0x02" name="SYNC" deck="2" channel="1" />
+  <button note="0x04" name="BTN_NOTE4" deck="2" channel="1" />
+  <button note="0x05" name="LOAD_PREV" deck="2" channel="1" />
+  <button note="0x1B" name="PFL" deck="2" channel="1" />
+  <button note="0x46" name="STEM_ACAPELLA" deck="2" channel="1" />
+  <button note="0x48" name="STEM_INSTRUMENTAL" deck="2" channel="1" />
+  <button note="0x50" name="JOG_TOUCH" deck="2" channel="1" />
+  <button note="0x54" name="STEMS_EQ" deck="2" channel="1" />
+
+  <led note="0x00" name="LED_PLAY" deck="2" channel="1" />
+  <led note="0x01" name="LED_CUE" deck="2" channel="1" />
+  <led note="0x02" name="LED_SYNC" deck="2" channel="1" />
+  <led note="0x04" name="LED_NOTE4" deck="2" channel="1" />
+  <led note="0x05" name="LED_LOAD_PREV" deck="2" channel="1" />
+  <led note="0x1B" name="LED_PFL" deck="2" channel="1" />
+  <led note="0x46" name="LED_STEM_ACAPELLA" deck="2" channel="1" />
+  <led note="0x48" name="LED_STEM_INSTRUMENTAL" deck="2" channel="1" />
+  <led note="0x54" name="LED_STEMS_EQ" deck="2" channel="1" />
+
+  <led note="0x2E" name="DECK_2_LED_BEAT_FWD" deck="2" channel="1" />
+  <led note="0x2F" name="DECK_2_LED_BEAT_MATCH" deck="2" channel="1" />
+  <led note="0x30" name="DECK_2_LED_BEAT_REV" deck="2" channel="1" />
+
+  <slider cc="0x09" name="PITCH" deck="2" channel="1" />
+  <slider cc="0x17" name="EQ_HIGH" deck="2" channel="1" zero="0x40" />
+  <slider cc="0x18" name="EQ_MID" deck="2" channel="1" zero="0x40" />
+  <slider cc="0x19" name="EQ_LOW" deck="2" channel="1" zero="0x40" />
+  <slider cc="0x1A" name="FILTER" deck="2" channel="1" zero="0x40" />
+  <slider cc="0x1C" name="VOLUME" deck="2" channel="1" />
+
+  <jog cc="0x06" name="JOG" deck="2" channel="1" zero="0x00" full="128" />
+  <jog cc="0x2B" name="JOG_SEARCH" deck="2" channel="1" zero="0x00" full="128" />
+
+  <!-- ========== DECK 1 PADS (CH 4) ========== -->
+  <button note="0x00" name="PAD_MODE" deck="1" channel="4" />
+  <button note="0x14" name="PAD_1" deck="1" channel="4" />
+  <button note="0x15" name="PAD_2" deck="1" channel="4" />
+  <button note="0x16" name="PAD_3" deck="1" channel="4" />
+  <button note="0x17" name="PAD_4" deck="1" channel="4" />
+  <button note="0x18" name="PAD_5" deck="1" channel="4" />
+  <button note="0x19" name="PAD_6" deck="1" channel="4" />
+  <button note="0x1A" name="PAD_7" deck="1" channel="4" />
+  <button note="0x1B" name="PAD_8" deck="1" channel="4" />
+  <button note="0x1C" name="PAD_1_SHIFT" deck="1" channel="4" />
+  <button note="0x1D" name="PAD_2_SHIFT" deck="1" channel="4" />
+  <button note="0x1E" name="PAD_3_SHIFT" deck="1" channel="4" />
+  <button note="0x1F" name="PAD_4_SHIFT" deck="1" channel="4" />
+  <button note="0x20" name="PAD_5_SHIFT" deck="1" channel="4" />
+  <button note="0x21" name="PAD_6_SHIFT" deck="1" channel="4" />
+  <button note="0x22" name="PAD_7_SHIFT" deck="1" channel="4" />
+  <button note="0x23" name="PAD_8_SHIFT" deck="1" channel="4" />
+
+  <led note="0x14" name="LED_PAD_1" deck="1" channel="4" />
+  <led note="0x15" name="LED_PAD_2" deck="1" channel="4" />
+  <led note="0x16" name="LED_PAD_3" deck="1" channel="4" />
+  <led note="0x17" name="LED_PAD_4" deck="1" channel="4" />
+  <led note="0x18" name="LED_PAD_5" deck="1" channel="4" />
+  <led note="0x19" name="LED_PAD_6" deck="1" channel="4" />
+  <led note="0x1A" name="LED_PAD_7" deck="1" channel="4" />
+  <led note="0x1B" name="LED_PAD_8" deck="1" channel="4" />
+  <led note="0x01" name="LED_PADMODE_HOTCUE" deck="1" channel="4" />
+  <led note="0x02" name="LED_PADMODE_LOOP" deck="1" channel="4" />
+  <led note="0x03" name="LED_PADMODE_SAMPLER" deck="1" channel="4" />
+  <led note="0x04" name="LED_PADMODE_STEMS" deck="1" channel="4" />
+
+  <!-- ========== DECK 2 PADS (CH 5) ========== -->
+  <button note="0x00" name="PAD_MODE" deck="2" channel="5" />
+  <button note="0x14" name="PAD_1" deck="2" channel="5" />
+  <button note="0x15" name="PAD_2" deck="2" channel="5" />
+  <button note="0x16" name="PAD_3" deck="2" channel="5" />
+  <button note="0x17" name="PAD_4" deck="2" channel="5" />
+  <button note="0x18" name="PAD_5" deck="2" channel="5" />
+  <button note="0x19" name="PAD_6" deck="2" channel="5" />
+  <button note="0x1A" name="PAD_7" deck="2" channel="5" />
+  <button note="0x1B" name="PAD_8" deck="2" channel="5" />
+  <button note="0x1C" name="PAD_1_SHIFT" deck="2" channel="5" />
+  <button note="0x1D" name="PAD_2_SHIFT" deck="2" channel="5" />
+  <button note="0x1E" name="PAD_3_SHIFT" deck="2" channel="5" />
+  <button note="0x1F" name="PAD_4_SHIFT" deck="2" channel="5" />
+  <button note="0x20" name="PAD_5_SHIFT" deck="2" channel="5" />
+  <button note="0x21" name="PAD_6_SHIFT" deck="2" channel="5" />
+  <button note="0x22" name="PAD_7_SHIFT" deck="2" channel="5" />
+  <button note="0x23" name="PAD_8_SHIFT" deck="2" channel="5" />
+
+  <led note="0x14" name="LED_PAD_1" deck="2" channel="5" />
+  <led note="0x15" name="LED_PAD_2" deck="2" channel="5" />
+  <led note="0x16" name="LED_PAD_3" deck="2" channel="5" />
+  <led note="0x17" name="LED_PAD_4" deck="2" channel="5" />
+  <led note="0x18" name="LED_PAD_5" deck="2" channel="5" />
+  <led note="0x19" name="LED_PAD_6" deck="2" channel="5" />
+  <led note="0x1A" name="LED_PAD_7" deck="2" channel="5" />
+  <led note="0x1B" name="LED_PAD_8" deck="2" channel="5" />
+  <led note="0x01" name="LED_PADMODE_HOTCUE" deck="2" channel="5" />
+  <led note="0x02" name="LED_PADMODE_LOOP" deck="2" channel="5" />
+  <led note="0x03" name="LED_PADMODE_SAMPLER" deck="2" channel="5" />
+  <led note="0x04" name="LED_PADMODE_STEMS" deck="2" channel="5" />
+
+  <!-- ========== GLOBAL (CH 15) ========== -->
+  <slider cc="0x08" name="CROSSFADER" channel="15" />
+  <button note="0x46" name="FADE_FX" channel="15" />
+  <button note="0x47" name="FADE_FX_NEXT" channel="15" />
+  <led note="0x46" name="LED_FADE_FX" channel="15" />
+
+  <encoder cc="0x00" name="BROWSE" channel="15" zero="0" />
+  <encoder cc="0x01" name="BROWSE_SECTION" channel="15" zero="0" />
+  <button note="0x07" name="BROWSE_PUSH" channel="15" />
+  <button note="0x02" name="LOAD" deck="1" channel="15" />
+  <button note="0x03" name="LOAD" deck="2" channel="15" />
+  <button note="0x12" name="PREPARE" channel="15" />
+
+  <slider cc="0x0A" name="MASTER" channel="15" />
+  <slider cc="0x0C" name="HEADPHONE" channel="15" />
+
+</device>

@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mapper device="Numark Party Mix MKIII" author="DJM1NG" version="850" description="Numark Party Mix MKIII">
+
+  <!-- Deck transport -->
+  <map value="PLAY" action="pioneer_play" />
+  <map value="CUE" action="pioneer_cue" />
+  <map value="SYNC" action="sync" />
+  <map value="BTN_NOTE4" action="nothing" />
+  <map value="LOAD_PREV" action="load_previous" />
+  <map value="PFL" action="pfl" />
+  <map value="STEM_ACAPELLA" action="stem_pad 'vocal'" />
+  <map value="STEM_INSTRUMENTAL" action="stem_pad 'instru'" />
+  <map value="STEMS_EQ" action="eq_mode 'frequency' ? eq_mode 'ezremix' deck : eq_mode 'frequency' deck" />
+
+  <map value="PITCH" action="pitch" />
+  <map value="EQ_HIGH" action="eq_high" />
+  <map value="EQ_MID" action="eq_mid" />
+  <map value="EQ_LOW" action="eq_low" />
+  <map value="FILTER" action="filter" />
+  <map value="VOLUME" action="level" />
+
+  <!-- Jog: Note80=G#5 touch, CC6 spin, CC43 search -->
+  <map value="JOG" action="touchwheel" />
+  <map value="JOG_SEARCH" action="touchwheel 'search'" />
+  <map value="JOG_TOUCH" action="touchwheel_touch" />
+
+  <!-- Manual LEDs -->
+  <map value="LED_PLAY" action="play" />
+  <map value="LED_CUE" action="cue" />
+  <map value="LED_SYNC" action="sync" />
+  <map value="LED_NOTE4" action="nothing" />
+  <map value="LED_LOAD_PREV" action="nothing" />
+  <map value="LED_PFL" action="pfl" />
+  <map value="LED_STEM_ACAPELLA" action="stem_pad 'vocal'" />
+  <map value="LED_STEM_INSTRUMENTAL" action="stem_pad 'instru'" />
+  <map value="LED_STEMS_EQ" action="eq_mode 'ezremix'" />
+  <map value="DECK_1_LED_BEAT_FWD" action="deck right play ? deck left play ? deck left get_beatdiff & param_bigger 52% ? on : off" />
+  <map value="DECK_1_LED_BEAT_MATCH" action="loaded ? masterdeck ? on : play ? is_sync" />
+  <map value="DECK_1_LED_BEAT_REV" action="deck right play ? deck left play ? deck left get_beatdiff & param_smaller 48% ? on : off" />
+
+  <map value="DECK_2_LED_BEAT_FWD" action="deck right play ? deck left play ? deck right get_beatdiff & param_bigger 52% ? on : off" />
+  <map value="DECK_2_LED_BEAT_MATCH" action="loaded ? masterdeck ? on : play ? is_sync" />
+  <map value="DECK_2_LED_BEAT_REV" action="deck right play ? deck left play ? deck right get_beatdiff & param_smaller 48% ? on : off" />
+
+  <!-- Pads -->
+  <map value="PAD_MODE" action="pad_page +1" />
+  <map value="PAD_1" action="pad 1" />
+  <map value="PAD_2" action="pad 2" />
+  <map value="PAD_3" action="pad 3" />
+  <map value="PAD_4" action="pad 4" />
+  <map value="PAD_5" action="pad 5" />
+  <map value="PAD_6" action="pad 6" />
+  <map value="PAD_7" action="pad 7" />
+  <map value="PAD_8" action="pad 8" />
+  <map value="PAD_1_SHIFT" action="padshift 1" />
+  <map value="PAD_2_SHIFT" action="padshift 2" />
+  <map value="PAD_3_SHIFT" action="padshift 3" />
+  <map value="PAD_4_SHIFT" action="padshift 4" />
+  <map value="PAD_5_SHIFT" action="padshift 5" />
+  <map value="PAD_6_SHIFT" action="padshift 6" />
+  <map value="PAD_7_SHIFT" action="padshift 7" />
+  <map value="PAD_8_SHIFT" action="padshift 8" />
+
+  <map value="LED_PAD_1" action="pad 1" />
+  <map value="LED_PAD_2" action="pad 2" />
+  <map value="LED_PAD_3" action="pad 3" />
+  <map value="LED_PAD_4" action="pad 4" />
+  <map value="LED_PAD_5" action="pad 5" />
+  <map value="LED_PAD_6" action="pad 6" />
+  <map value="LED_PAD_7" action="pad 7" />
+  <map value="LED_PAD_8" action="pad 8" />
+  <map value="LED_PADMODE_HOTCUE" action="pad_page 1" />
+  <map value="LED_PADMODE_LOOP" action="pad_page 2" />
+  <map value="LED_PADMODE_SAMPLER" action="pad_page 3" />
+  <map value="LED_PADMODE_STEMS" action="pad_page 4" />
+
+  <!-- Global -->
+  <map value="CROSSFADER" action="crossfader" />
+  <map value="FADE_FX" action="smart_fader & effect_mixfx_select 'Echo Out' & effect_mixfx_activate" />
+  <map value="FADE_FX_NEXT" action="crossfader_disable" />
+  <map value="LED_FADE_FX" action="smart_fader" />
+
+  <map value="BROWSE" action="browser_scroll" />
+  <map value="BROWSE_SECTION" action="browser_scroll" />
+  <map value="BROWSE_PUSH" action="holding ? browser_window 'folders' ? browser_folder : browser_window 'songs' : browser_window 'folders' ? browser_enter : browser_window 'folders'" />
+  <map value="LOAD" action="load" />
+  <map value="PREPARE" action="browser_addprepare" />
+  <map value="MASTER" action="master_volume" />
+  <map value="HEADPHONE" action="headphone_volume" />
+
+</mapper>
