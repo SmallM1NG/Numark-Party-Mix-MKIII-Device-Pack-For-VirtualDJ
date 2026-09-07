@@ -1,4 +1,4 @@
-# Numark Party Mix MKIII Devices Pack For VirtualDJ
+# Numark Party Mix MKIII Device Pack For VirtualDJ
 
 这是我自己编写的 Numark Party Mix MKIII 的VirtualDJ设备包 除三颗LED彩灯外 其余功能均得到适配
 
